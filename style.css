@@ -1,0 +1,251 @@
+/*
+Theme Name: Broxy Book Center
+Author: Salem Bahri
+Author URI: #
+Description: theme for books
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+Text Domain: broxy-bookcenter
+Tags: book, for-kids, technologies
+*/
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(87, 87, 87);
+}
+
+ul{
+    list-style: none;
+}
+h1,h2,h3,h4,h5,h6,p,a,img{
+    margin-bottom: 1rem;
+}
+
+:root {
+    --primary-color: #2C3E50; /* Deep blue for a professional and calming vibe */
+    --secondary-color: #E74C3C; /* Vibrant red for accents and attention-grabbing elements */
+    --dark-color: #1A252F; /* Dark navy for text and background depth */
+    --light-color: #ECF0F1; /* Light grayish-white for backgrounds and soft contrasts */
+}
+/* Utility */
+.py-1{padding: 1rem 0;}
+.py-2{padding: 2rem 0;}
+.py-3{padding: 3rem 0;}
+.py-4{padding: 4rem 0;}
+
+.my-1{margin: 1rem 0;}
+.my-2{margin: 2rem 0;}
+.my-3{margin: 3rem 0;}
+.my-4{margin: 4rem 0;}
+
+
+
+.container{
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.container-90{
+    max-width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+.d-grid-4{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1rem;
+}
+.d-grid-2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1rem;
+}
+
+.d-grid-7-3{
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    grid-gap: 1rem;
+}
+
+.d-grid-2-8{
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    grid-gap: 1rem;
+
+}
+
+
+
+
+
+.bg-white{
+background: #fff;
+}
+.text-center{
+text-align: center;
+}
+
+#main-header .website-title{
+    color: var(--secondary-color);
+}
+#main-header .website-title:hover{
+    opacity: 0.8;
+}
+
+#main-header ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: var(--secondary-color);
+    padding: 1rem;
+}
+
+#main-header ul li{
+    padding: 0 1rem;
+}
+
+#main-header ul li a{
+    color: #fff;
+}
+
+#main-header ul li a:hover{
+    color: var(--primary-color);
+}
+
+/* Main */
+#main .book{
+    background: #ECF0F1;
+    border-radius: 20px;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; */
+}
+
+/* #main .book:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 15px 40px rgba(0, 0, 0, 0.3);
+} */
+
+
+
+
+
+
+
+
+#main .book a{
+    color: var(--secondary-color);
+}
+#main .book a:hover{
+    opacity: 0.7;
+}
+
+
+/* taxonomy page */
+#main .content .term-title{
+    margin: 1rem;
+    border-bottom: 0.2rem solid var(--secondary-color);
+}
+#main .content .term-title h1{
+    margin: 0;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    background: var(--secondary-color);
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+    display: inline-block;
+}
+
+
+
+
+#main #sidebar-book .sidebar-title{
+    margin: 1.5rem;
+    border-bottom: 0.2rem solid var(--primary-color);
+}
+#main #sidebar-book .sidebar-title p{
+    margin: 0;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    background: var(--primary-color);
+    color: var(--light-color);
+    border-radius: 5px 5px 0 0;
+    display: inline-block;
+    font-weight: bold;
+
+
+}
+#sidebar-book .book{
+    margin: 1rem;
+}
+
+
+/* Pagination */
+#pagination ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+#pagination ul li {
+    margin: 0 0.5rem;
+}
+
+#pagination ul li a,
+#pagination ul li span {
+    display: block;
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: var(--light-color);
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+
+#pagination ul li span.current {
+    opacity: 0.6;
+    cursor: default;
+}
+
+
+
+
+/* Footer */
+#main-footer{
+    background: var(--secondary-color);
+    text-align: center;
+}
+
+#main-footer p{
+    padding: 0.3rem 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+@media (max-width:786px){
+    #main-header ul{
+        display: none;
+    }
+    #main-header{
+        border-bottom: 1rem solid var(--secondary-color);
+    }
+    .d-grid-4,
+    .d-grid-2,
+    .d-grid-7-3,
+    .d-grid-2-8{
+        grid-template-columns: 1fr;
+    }
+    
+}
+
